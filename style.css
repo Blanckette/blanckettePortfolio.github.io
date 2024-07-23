@@ -126,21 +126,49 @@ header {
         flex-direction: column;
         gap: 2rem;
 
-        a {
-            text-decoration: none;
-            color: black;
+        div:hover {
+            filter: grayscale(80);
+            transition: 1s ease;
         }
 
-        a:hover {
-            text-decoration: underline;
+        & a {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            position: relative;
         }
+
+        & a::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            transform: scaleX(0);
+            height: 0.10rem;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease;
+        }
+
+        & a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom;
+        }        
     }
+}
+
+div:hover {
+    filter: grayscale(80);
+    transition: 1s ease;
 }
 
 h2 {
     text-transform: uppercase;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 0.2rem;
 }
 
 .projets-portfolio {
@@ -152,16 +180,32 @@ h2 {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
 
         li {
-            display: flex;
-            gap: 5rem;
-
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            justify-items: start;
+            row-gap: 2rem;
+            align-items: center; 
+            padding-left: 2rem;
+            padding-right: 2rem;
+                
             img {
                 height: 1.5rem;
                 width: 1.5rem;
+            }
+
+            & .project-title {
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+                align-items: center;
+
+                & .title-xl {
+                    font-size: 2rem;
+                }
             }
         }
     }
@@ -197,6 +241,9 @@ footer {
         align-content: center;
         gap: 2rem;
         padding-top: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-weight: 100;
     }
 
     .online {
