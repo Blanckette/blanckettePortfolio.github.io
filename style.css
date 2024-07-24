@@ -14,6 +14,8 @@ body {
     font-family: Lora;
 }
 
+/* regrouper tous les elemets repete comme liens paragraph etc */
+
 header {
     width: 100%;
     height: 50rem;
@@ -22,7 +24,7 @@ header {
     justify-content: space-between;
     padding: 2.5rem;
 
-    & nav {
+    & .menu {
         display: grid;
         grid-template-rows: repeat(3, 7rem);
         grid-auto-flow: row;
@@ -37,7 +39,7 @@ header {
         text-transform: uppercase;
         position: relative;
 
-        & a {
+        & .menu-item {
             text-decoration: none;
             color: black;
             font-style: normal;
@@ -46,7 +48,7 @@ header {
             position: inherit;
         }
 
-        & a:hover {
+        & .menu-item:hover {
             transform: scale(1.05) skewX(-5deg);
         }
     }
@@ -56,14 +58,14 @@ header {
         justify-content: flex-end;
         gap: 2rem;
 
-        & a {
+        & .social {
             text-decoration: none;
             color: black;
             display: inline-block;
             position: relative;
         }
 
-        & a::after {
+        & .social::after {
             content: '';
             position: absolute;
             width: 100%;
@@ -76,7 +78,7 @@ header {
             transition: transform 0.25s ease-out;
         }
 
-        & a:hover::after {
+        & .social:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
         }   
@@ -113,7 +115,7 @@ header {
     padding-left: 2.5rem;
 }
 
-.projets-carousel {
+.projetcs-carousel {
     margin-top: 3rem;
     margin-bottom: 3rem;
     display: flex;
@@ -121,24 +123,24 @@ header {
     gap: 3rem;
     justify-content: center;
 
-    & .projet-carousel-item {
+    & .project-carousel-item {
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
-        & .projet-carousel-item:hover {
+        & .project-carousel-item:hover {
             filter: grayscale(80);
             transition: 1s ease;
         }
 
-        & a {
+        & .project-link {
             text-decoration: none;
             color: black;
             display: inline-block;
             position: relative;
         }
 
-        & a::after {
+        & .project-link::after {
             content: '';
             position: absolute;
             width: 50%;
@@ -151,14 +153,14 @@ header {
             transition: transform 0.5s ease;
         }
 
-        & a:hover::after {
+        & .project-link:hover::after {
             transform: scaleX(1);
             transform-origin: bottom;
         }        
     }
 }
 
-div:hover {
+.grayscale-image:hover {
     filter: grayscale(80);
     transition: 1s ease;
 }
@@ -176,16 +178,16 @@ h2 {
     flex-direction: column;
     padding: 2.5rem;
 
-    ul {
+    & .projects-list {
         display: flex;
         flex-direction: column;
         gap: 3rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
 
-        li {
+        & .project-list-item {
             display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-columns: 2fr 1fr; 
             justify-items: start;
             row-gap: 2rem;
             align-items: center; 
@@ -215,14 +217,32 @@ h2 {
 
                 & .title-xl {
                     font-size: 2rem;
+                    padding-left: 15rem;
                 }
             }
 
             .project-details-container {
                 display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                background-color: beige;
+                border-radius: 5%;
+                padding: 2.5rem;
+                box-shadow: 10px 2px 2px black;
 
-                .project-image {
-                    transform: scale(0.3);
+                & .project-details-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.5rem;
+
+                    & > h3 {
+                        text-transform: uppercase;
+                        font-weight: 100;
+                    }
+                }
+
+                & .project-details-image > img {
+                    width: 40%;
                 }
             }
         }
