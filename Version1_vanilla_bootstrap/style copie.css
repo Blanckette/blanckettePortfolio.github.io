@@ -4,6 +4,11 @@
     box-sizing: border-box;
  }
 
+:root {
+    --main-bg-color: rgba(233, 227, 221, 1);
+    --main-black-color: rgba(25, 23, 23, 1);
+} 
+
 body {
     background-color: rgba(233, 227, 221, 1);
     width: 100%;
@@ -12,10 +17,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: Lora;
-
-    @media screen and (min-width: 992px){
-        margin-left: 0;
-        margin-right: 0;
 }
 
 /* regrouper tous les elemets repete comme liens paragraph etc */
@@ -28,7 +29,7 @@ header {
     justify-content: space-between;
     padding: 2.5rem;
 
-    & .menu {
+    & #menu {
         display: grid;
         grid-template-rows: repeat(3, 7rem);
         grid-auto-flow: row;
@@ -134,25 +135,16 @@ header {
         overflow-x: auto;
         gap: 3rem;
         align-self: center;
+        scrollbar-width: thin;
+        scrollbar-gutter: var(--main-bg-color);
+        scrollbar-color: var(--main-black-color);
     }
-    /* /* overflow: scroll;
-    width: 20rem;
-    height: 10rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transform: rotate(-90deg);
-    transform-origin: right top;
-    transform:rotate(-90deg) translateY(-100px); */
 
     & .project-carousel-item {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         flex: 0 0 auto;
-        /* width: 100px;
-        height: 100px;
-        transform: rotate(90deg);
-        transform-origin: right top; */
 
         & .project-carousel-item:hover {
             filter: grayscale(80);
