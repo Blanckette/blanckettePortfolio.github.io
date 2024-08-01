@@ -58,6 +58,10 @@ header {
         }
     }
 
+    & #photoId {
+        /* style photo */
+    }
+
     & .social-links {
         display: flex;
         justify-content: flex-end;
@@ -289,6 +293,205 @@ h2 {
             }
         }
     }
+}
+
+#talentAndSkills {
+    padding: 0 2.5rem;
+    position: relative;
+
+    & .subtitle {
+        position: relative;
+        left: -0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        
+        & p > button {
+            text-transform: uppercase;
+        }
+    }
+
+    & .details {
+        position: relative;
+
+        & .details-list {
+            text-transform: capitalize;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+            left: 15rem;
+        }
+    }
+
+    & .progress-circles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        align-content: center;
+        width: 50%;
+        position: relative;
+        left: 5rem;
+        padding: 3rem;
+
+        & .circle {
+            height: 6rem;
+            width: 6rem;
+        }
+    }
+}
+
+#educationSpecialisation {
+    padding: 0 2.5rem;
+    position: relative;
+
+    & .subtitle {
+        position: relative;
+        left: -0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        
+        & p > button {
+            text-transform: uppercase;
+        }
+    }
+
+    & .details {
+        position: relative;
+
+        & .school {
+            position: relative;
+            left: 2rem;
+            padding-top: 0;
+            padding-bottom: 1.5rem;
+            padding-left: 1rem;
+            font-size: small;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        & .details-list {
+            text-transform: capitalize;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+            left: 15rem;
+        }
+    }
+}
+
+#workBackground {
+    padding: 0 2.5rem;
+    position: relative;
+
+    & .subtitle {
+        position: relative;
+        left: -0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        
+        & p > button {
+            text-transform: uppercase;
+        }
+    }
+
+    & .details {
+        position: relative;
+
+        & .place {
+            position: relative;
+            left: 2rem;
+            padding-top: 0;
+            padding-bottom: 1.5rem;
+            padding-left: 1rem;
+            font-size: small;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        & .details-list {
+            text-transform: capitalize;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+            left: 15rem;
+        }
+    }
+}
+
+#languages {
+    padding: 0 2.5rem;
+    position: relative;
+
+    & .subtitle {
+        position: relative;
+        left: -0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        
+        & p > button {
+            text-transform: uppercase;
+        }
+    }
+
+    & .details {
+        position: relative;
+
+        & .details-list {
+            text-transform: capitalize;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+            left: 15rem;
+        }
+    }
+}
+
+#interests {
+    padding: 0 2.5rem;
+    position: relative;
+
+    & .subtitle {
+        position: relative;
+        left: -0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        
+        & p > button {
+            text-transform: uppercase;
+        }
+
+        & .uppercase {
+            text-transform: uppercase;
+        }
+    }
+
+    & .details {
+        position: relative;
+
+        & .details-list {
+            text-transform: capitalize;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+            left: 15rem;
+        }
+    }
+}
+
+.subtitles {
+    margin: 1.5rem;
+    border-left: 0.05rem solid;
+    border-color: var(--main-black-color);
 }
 
 footer {
