@@ -1,13 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
  }
-
-:root {
-    --main-bg-color: rgba(233, 227, 221, 1);
-    --main-black-color: rgba(25, 23, 23, 1);
-} 
 
 body {
     background-color: rgba(233, 227, 221, 1);
@@ -29,7 +28,7 @@ header {
     justify-content: space-between;
     padding: 2.5rem;
 
-    & #menu {
+    & .menu {
         display: grid;
         grid-template-rows: repeat(3, 7rem);
         grid-auto-flow: row;
@@ -56,10 +55,6 @@ header {
         & .menu-item:hover {
             transform: scale(1.05) skewX(-5deg);
         }
-    }
-
-    & #photoId {
-        /* style photo */
     }
 
     & .social-links {
@@ -122,33 +117,20 @@ header {
     border-color: black;
     padding-right: 2.5rem;
     padding-left: 2.5rem;
-}
+} 
 
 .projetcs-carousel {
     margin-top: 3rem;
     margin-bottom: 3rem;
     display: flex;
+    flex-direction: row;
+    gap: 3rem;
     justify-content: center;
-    align-items: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
-
-    & .carousel-container {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 3rem;
-        align-self: center;
-        scrollbar-width: thin;
-        scrollbar-gutter: var(--main-bg-color);
-        scrollbar-color: var(--main-black-color);
-    }
 
     & .project-carousel-item {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        flex: 0 0 auto;
 
         & .project-carousel-item:hover {
             filter: grayscale(80);
@@ -244,8 +226,8 @@ h2 {
             }
 
             .project-details-container {
-                display: flex;
-                flex-direction: column;
+                /* display: flex;
+                flex-direction: column; */
                 gap: 3rem;
                 background-color: rgba(216, 206, 200, 0.589);
                 border-radius: 5%;
@@ -293,211 +275,6 @@ h2 {
             }
         }
     }
-}
-
-#talentAndSkills {
-    padding: 0 2.5rem;
-    position: relative;
-
-    & .subtitle {
-        position: relative;
-        left: -0.75rem;
-        padding-top: 0.5rem;
-        padding-bottom: 1.5rem;
-        
-        & p > button {
-            text-transform: uppercase;
-        }
-    }
-
-    & .details {
-        position: relative;
-
-        & .details-list {
-            text-transform: capitalize;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 0.5rem;
-            position: relative;
-            left: 15rem;
-        }
-    }
-
-    & .progress-circles {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 2rem;
-        align-content: center;
-        width: 50%;
-        position: relative;
-        left: 5rem;
-        padding: 3rem;
-
-        & .circle {
-            height: 6rem;
-            width: 6rem;
-        }
-    }
-}
-
-#educationSpecialisation {
-    padding: 0 2.5rem;
-    position: relative;
-
-    & .subtitle {
-        position: relative;
-        left: -0.75rem;
-        padding-top: 0.5rem;
-        padding-bottom: 1.5rem;
-        
-        & p > button {
-            text-transform: uppercase;
-        }
-    }
-
-    & .details {
-        position: relative;
-
-        & .school {
-            position: relative;
-            left: 2rem;
-            padding-top: 0;
-            padding-bottom: 1.5rem;
-            padding-left: 1rem;
-            font-size: small;
-            text-decoration: underline;
-            text-transform: capitalize;
-        }
-
-        & .details-list {
-            text-transform: capitalize;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 0.5rem;
-            position: relative;
-            left: 15rem;
-        }
-    }
-}
-
-#workBackground {
-    padding: 0 2.5rem;
-    position: relative;
-
-    & .subtitle {
-        position: relative;
-        left: -0.75rem;
-        padding-top: 0.5rem;
-        padding-bottom: 1.5rem;
-        
-        & p > button {
-            text-transform: uppercase;
-        }
-    }
-
-    & .details {
-        position: relative;
-
-        & .place {
-            position: relative;
-            left: 2rem;
-            padding-top: 0;
-            padding-bottom: 1.5rem;
-            padding-left: 1rem;
-            font-size: small;
-            text-decoration: underline;
-            text-transform: capitalize;
-        }
-
-        & .details-list {
-            text-transform: capitalize;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 0.5rem;
-            position: relative;
-            left: 15rem;
-        }
-    }
-}
-
-#languages {
-    padding: 0 2.5rem;
-    position: relative;
-
-    & .subtitle {
-        position: relative;
-        left: -0.75rem;
-        padding-top: 0.5rem;
-        padding-bottom: 1.5rem;
-        
-        & p > button {
-            text-transform: uppercase;
-        }
-    }
-
-    & .details {
-        position: relative;
-
-        & .details-list {
-            text-transform: capitalize;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 0.5rem;
-            position: relative;
-            left: 15rem;
-        }
-    }
-}
-
-#interests {
-    padding: 0 2.5rem;
-    position: relative;
-
-    & .subtitle {
-        position: relative;
-        left: -0.75rem;
-        padding-top: 0.5rem;
-        padding-bottom: 1.5rem;
-        
-        & p > button {
-            text-transform: uppercase;
-        }
-
-        & .uppercase {
-            text-transform: uppercase;
-        }
-    }
-
-    & .details {
-        position: relative;
-
-        & .details-list {
-            text-transform: capitalize;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 0.5rem;
-            position: relative;
-            left: 15rem;
-        }
-    }
-}
-
-.subtitles {
-    margin: 1.5rem;
-    border-left: 0.05rem solid;
-    border-color: var(--main-black-color);
-}
-
-.sub-hover:hover {
-    background-color: var(--main-black-color);
-    color: var(--main-bg-color);
-    transition: all 0.5s ease;
 }
 
 footer {
