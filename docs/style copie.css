@@ -59,7 +59,30 @@ header {
     }
 
     & #photoId {
-        /* style photo */
+        transform: scale(0.8);
+    }
+
+    & .home-btn-container {
+        height: 2.5rem;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .home-btn {
+        border-style: none;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-weight: lighter;
+    }
+
+    & .home-btn:hover {
+        background-color: var(--main-black-color);
+        color: var(--main-bg-color);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.5s ease;
     }
 
     & .social-links {
@@ -492,6 +515,12 @@ h2 {
     margin: 1.5rem;
     border-left: 0.05rem solid;
     border-color: var(--main-black-color);
+}
+
+.sub-hover:hover {
+    background-color: var(--main-black-color);
+    color: var(--main-bg-color);
+    transition: all 0.5s ease;
 }
 
 footer {
