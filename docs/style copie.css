@@ -199,6 +199,28 @@ header {
         margin-bottom: 3rem;
     }
 
+    @media (width < 640px) {
+        .hero-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: 2rem;
+            margin-right: 2.5rem;
+        }
+    }
+
+    @media (width >= 640px) and (width <= 1024px) {
+        .hero-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-self: flex-start;
+            justify-self: flex-start;
+        }
+    }
+
     & .presentation {
         display: flex;
         flex-direction: column;
@@ -210,6 +232,24 @@ header {
         flex-shrink: 0;
         padding-bottom: 2rem;
 
+    }
+
+    @media (width < 640px) {
+        .presentation {
+            display: flex;
+            justify-content: center;
+            align-self: flex-start;
+            margin-top: 2rem;
+        }
+    }
+
+    @media (width >= 640px) and (width <= 1024px) {
+        .presentation {
+            display: flex;
+            justify-content: center;
+            align-self: flex-start;
+            margin-top: 2rem;
+    }
     }
 }
 
@@ -300,12 +340,20 @@ h2 {
         padding-top: 3rem;
         padding-bottom: 3rem;
 
+        @media (width >= 1024px) {
+            .project-list-item {
+                display: grid; 
+                grid-template-columns: 2fr 1fr; 
+                justify-items: start;
+                row-gap: 2rem;
+                align-items: center; 
+        }
         & .project-list-item {
-            display: grid; 
+            /* display: grid; 
             grid-template-columns: 2fr 1fr; 
             justify-items: start;
             row-gap: 2rem;
-            align-items: center; 
+            align-items: center;  */
             padding-left: 2rem;
             padding-right: 2rem;
 
@@ -386,6 +434,32 @@ h2 {
             }
         }
     }
+
+    @media (width < 640px) {
+        .plus-sign {
+            display: none;
+        }
+        .number {
+            display: none;
+        }
+        .project-list-item {
+            display: flex;
+
+        }
+    }
+
+    @media (width >= 640px) and (width <= 1024px) {
+        .plus-sign {
+            display: none;
+        }
+        .number {
+            display: none;
+        }
+        .project-list-item {
+            display: flex;
+        }
+    }
+}
 }
 
 #talentAndSkills {
