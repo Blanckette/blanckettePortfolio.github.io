@@ -347,13 +347,29 @@ h2 {
                 justify-items: start;
                 row-gap: 2rem;
                 align-items: center; 
+            }   
         }
+
+        @media (width >= 640px) and (width <= 1024px) {
+            .project-list-item {
+                display: grid; 
+                grid-template-columns: 2fr 1fr; 
+                justify-items: start;
+                row-gap: 2rem;
+                align-items: center; 
+            } 
+
+            .project-title {
+                display: flex;
+                align-items: flex-start;
+
+                .number {
+                    display: none;
+                }
+            }
+        }
+
         & .project-list-item {
-            /* display: grid; 
-            grid-template-columns: 2fr 1fr; 
-            justify-items: start;
-            row-gap: 2rem;
-            align-items: center;  */
             padding-left: 2rem;
             padding-right: 2rem;
 
@@ -372,15 +388,17 @@ h2 {
                 transition: 0.5s ease;
             }
 
-            & .project-title {
-                display: flex;
-                flex-direction: row;
-                gap: 1.5rem;
-                align-items: center;
-
-                & .title-xl {
-                    font-size: 2rem;
-                    padding-left: 15rem;
+            @media (width >= 1024px) {
+                .project-title {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                    align-items: center;
+    
+                    & .title-xl {
+                        font-size: 2rem;
+                        padding-left: 15rem;
+                    }
                 }
             }
 
@@ -447,19 +465,6 @@ h2 {
 
         }
     }
-
-    @media (width >= 640px) and (width <= 1024px) {
-        .plus-sign {
-            display: none;
-        }
-        .number {
-            display: none;
-        }
-        .project-list-item {
-            display: flex;
-        }
-    }
-}
 }
 
 #talentAndSkills {
@@ -736,14 +741,40 @@ footer {
         padding-left: 3rem;
     }
 
-    & .gallery-pictures {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 10rem;
-        column-gap: 5rem;
-        padding: 2.5rem;
-        justify-content: center;
-        justify-items: center;
+    @media (width <= 640px) {
+        .gallery-pictures {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .painting {
+            height: (2rem);
+        }
+    }
+
+    @media (width >= 640px) and (width <= 1024px) {
+        .gallery-pictures {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            row-gap: 10rem;
+            column-gap: 5rem;
+            padding: 2.5rem;
+            justify-content: center;
+            justify-items: center;
+        }
+    }
+
+    @media (width >= 1024px) {
+        & .gallery-pictures {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            row-gap: 10rem;
+            column-gap: 5rem;
+            padding: 2.5rem;
+            justify-content: center;
+            justify-items: center;
+        }
     }
 }
