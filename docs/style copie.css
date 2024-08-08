@@ -211,7 +211,7 @@ header {
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
-        margin-bottom: 3rem;
+        /* margin-bottom: 3rem; */
     }
 
     @media (width < 640px) {
@@ -222,6 +222,8 @@ header {
             align-items: center;
             gap: 2rem;
             margin-right: 2.5rem;
+            block-size: fit-content;
+            width: fit-content;
         }
     }
 
@@ -245,7 +247,7 @@ header {
         width: 353px;
         height: 234px;
         flex-shrink: 0;
-        padding-bottom: 2rem;
+        /* padding-bottom: 2rem; */
 
     }
 
@@ -485,6 +487,7 @@ h2 {
 #talentAndSkills {
     padding: 0 2.5rem;
     position: relative;
+    top: 5rem;
 
     & .subtitle {
         position: relative;
@@ -548,6 +551,7 @@ h2 {
 #educationSpecialisation {
     padding: 0 2.5rem;
     position: relative;
+    top: 2.5rem;
 
     & .subtitle {
         position: relative;
