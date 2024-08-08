@@ -100,8 +100,8 @@ header {
         display: grid;
         grid-template-rows: repeat(3, 7rem);
         grid-auto-flow: row;
-        gap: 1rem;
-        padding: 1rem 2rem;
+        gap: 1.5rem;
+        /* padding: 1rem 2rem; */
         color: var(--main-black-color);
         font-family: Lora;
         font-size: 5rem;
@@ -115,13 +115,28 @@ header {
             text-decoration: none;
             color: black;
             font-style: normal;
-            padding: 2rem;
+            /* padding: 2rem; */
             transition: transform 0.5s ease;
             position: inherit;
         }
 
         & .menu-item:hover {
             transform: scale(1.05) skewX(-5deg);
+        }
+
+        @media (width <= 997px) {
+            .menu-item {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                font-size: 4rem;
+            }
+        }
+    }
+
+    @media (width <= 997px) {
+        #menu {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
     }
 
@@ -494,6 +509,13 @@ h2 {
             position: relative;
             left: 15rem;
         }
+
+        @media (width <= 997px) {
+            .details-list {
+                position: relative;
+                left: 1.5rem;
+            }
+        }
     }
 
     & .progress-circles {
@@ -510,6 +532,15 @@ h2 {
         & .circle {
             height: 6rem;
             width: 6rem;
+        }
+    }
+
+    @media (width <= 997px) {
+        .progress-circles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
         }
     }
 }
@@ -551,6 +582,13 @@ h2 {
             gap: 0.5rem;
             position: relative;
             left: 15rem;
+        }
+
+        @media (width <= 997px) {
+            .details-list {
+                position: relative;
+                left: 1.5rem;
+            }
         }
     }
 }
@@ -604,6 +642,13 @@ h2 {
                 transition: all 0.5s ease-in-out;
             }
         }
+
+        @media (width <= 997px) {
+            .details-list {
+                position: relative;
+                left: 1.5rem;
+            }
+        }
     }
 }
 
@@ -633,6 +678,13 @@ h2 {
             gap: 0.5rem;
             position: relative;
             left: 15rem;
+        }
+
+        @media (width <= 997px) {
+            .details-list {
+                position: relative;
+                left: 1.5rem;
+            }
         }
     }
 }
@@ -667,6 +719,12 @@ h2 {
             gap: 0.5rem;
             position: relative;
             left: 15rem;
+        }
+        @media (width <= 997px) {
+            .details-list {
+                position: relative;
+                left: 1.5rem;
+            }
         }
     }
 }
@@ -726,6 +784,12 @@ footer {
         & a:hover {
             transform: scale(1.1);
             transition: 0.5s ease;
+        }
+    }
+
+    @media (width <= 640px) {
+        .online {
+            display: none;
         }
     }
 }
